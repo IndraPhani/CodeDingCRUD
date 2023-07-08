@@ -11,4 +11,13 @@ services:
     volumes:
       - ./data.sql:/docker-entrypoint-initdb.d/data.sql
 
-  
+  artemis:
+    image: quay.io/artemiscloud/activemq-artemis-broker
+    ports:
+      - "5672:5672"
+      - "61616:61616"
+    volumes:
+      - ./broker/broker.xml:/opt/amq/conf/broker.xml
+    environment:
+      AMQ_USER: "admin"
+      AMQ_PASSWORD: "admin"

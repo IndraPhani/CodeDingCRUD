@@ -1,2 +1,17 @@
-package com.example.model;public class HelloWorldMessgae {
+package com.example.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class HelloWorldMessgae {
+
+    private Long id;
+    private String message;
+
 }
