@@ -5,13 +5,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class HelloWorldMessgae {
+public class HelloWorldMessgae implements Serializable {
 
-    private Long id;
+    static final long serialVersionID = -434242l;
+
+    private UUID id;
     private String message;
 
 }
